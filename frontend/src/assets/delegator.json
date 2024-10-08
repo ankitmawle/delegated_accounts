@@ -1,0 +1,326 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_token_address",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_admin",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "delegate_accounts",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "is_resticted",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "delegate",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "daily_transactions",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "daily_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "transastion_delay",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "transaction_limit",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "last_timestamp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "today_spent",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "today_transctions",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_receiver",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "delegated_transaction",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "delegates_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "get_all_delegate_addresses",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			}
+		],
+		"name": "get_delegate_info",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "is_resticted",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daily_transactions",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daily_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "transastion_delay",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "transaction_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "last_timestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "today_spent",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "today_transctions",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Delegator.delegate",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_daily_transactions",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_daily_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_transastion_delay",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_transaction_limit",
+				"type": "uint256"
+			}
+		],
+		"name": "register_delegate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			}
+		],
+		"name": "restrict_delegate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			}
+		],
+		"name": "restrict_delegate_admin",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "token_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			}
+		],
+		"name": "unrestrict_delegate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_daily_transactions",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_daily_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_transastion_delay",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_transaction_limit",
+				"type": "uint256"
+			}
+		],
+		"name": "update_delegate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
