@@ -26,8 +26,8 @@ const checkForDelegateAccount = async (walletAddress) => {
     }
   };
 
-  const sendUSDT = async (receiverAddress, amount) => {
-    const tronWeb = createTronWebInstance();
+  const sendUSDT = async (delegatorAddress, receiverAddress, amount) => {
+    // const tronWeb = createTronWebInstance();
     const contract = await tronWeb.contract(delegatorABI, delegatorAddress);
     try {
       const result = await contract.delegated_transaction(receiverAddress, BigInt(amount)*(BigInt(10**6))).send();
